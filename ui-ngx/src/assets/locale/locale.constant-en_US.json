@@ -208,7 +208,7 @@
         "domain-name": "Domain name",
         "domain-name-unique": "Domain name and protocol need to unique.",
         "domain-name-max-length": "Domain name should be less than 256",
-        "error-verification-url": "A domain name shouldn't contain symbols '/' and ':'. Example: thingsboard.io",
+        "error-verification-url": "A domain name shouldn't contain symbols '/' and ':'. Example: sennse.ispc.cnr.it",
         "connection-settings": "Connection settings",
         "oauth2": {
           "access-token-uri": "Access token URI",
@@ -1266,6 +1266,12 @@
         "non-existent-dashboard-state-error": "Dashboard state with id \"{{ stateId }}\" is not found",
         "edit-mode": "Edit mode",
         "duplicate-state-action": "Duplicate state"
+    },
+    "network_design":{
+        "network_design": "Network Design"
+    },
+    "create_network":{
+        "create_network": "Create Network"
     },
     "datakey": {
         "settings": "Settings",

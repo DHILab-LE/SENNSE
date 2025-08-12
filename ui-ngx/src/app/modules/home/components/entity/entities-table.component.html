@@ -1,6 +1,6 @@
 <!--
 
-    Copyright © 2016-2024 The Thingsboard Authors
+    Copyright © 2016-2025 ${ISPC Lecce | CNR}
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -45,6 +45,11 @@
                               asButton strokedButton historyOnly [forAllTimeEnabled]="entitiesTableConfig.forAllTimeEnabled"></tb-timewindow>
             </div>
             <span fxFlex></span>
+            
+            
+            
+            
+            
             <div [fxShow]="addEnabled()">
               <button mat-icon-button [disabled]="isLoading$ | async"
                       *ngIf="!entitiesTableConfig.addActionDescriptors.length; else addActions"
@@ -81,6 +86,10 @@
                 </ng-template>
               </ng-template>
             </div>
+
+
+            
+            
             <button mat-icon-button [disabled]="isLoading$ | async"
                     [fxShow]="actionDescriptor.isEnabled()" *ngFor="let actionDescriptor of headerActionDescriptors"
                     matTooltip="{{ actionDescriptor.name }}"

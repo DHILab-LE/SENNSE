@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -79,7 +79,7 @@ export const resolveBreakpoint = (breakpoint: string): string => {
   return breakpoint;
 };
 
-export const helpBaseUrl = 'https://thingsboard.io';
+export const helpBaseUrl = 'https://sennse.ispc.cnr.it';
 
 export const docPlatformPrefix = '';
 

@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import { instanceOfSearchableComponent, ISearchableComponent } from '@home/model
 import { ActiveComponentService } from '@core/services/active-component.service';
 import { RouterTabsComponent } from '@home/components/router-tabs.component';
 import { FormBuilder } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { isDefined, isDefinedAndNotNull } from '@core/utils';
 
 @Component({
@@ -52,7 +52,7 @@ export class HomeComponent extends PageComponent implements AfterViewInit, OnIni
   sidenavMode: 'over' | 'push' | 'side' = 'side';
   sidenavOpened = true;
 
-  logo = 'assets/logo_title_white.svg';
+  logo = 'assets/sennse-logo.svg';
 
   @ViewChild('sidenav')
   sidenav: MatSidenav;
@@ -73,6 +73,7 @@ export class HomeComponent extends PageComponent implements AfterViewInit, OnIni
               @Inject(WINDOW) private window: Window,
               private activeComponentService: ActiveComponentService,
               private fb: FormBuilder,
+              private router: Router,
               public breakpointObserver: BreakpointObserver) {
     super(store);
   }
@@ -194,5 +195,9 @@ export class HomeComponent extends PageComponent implements AfterViewInit, OnIni
     if (this.searchableComponent) {
       this.searchableComponent.onSearchTextUpdated(searchText);
     }
+  }
+
+  clickToHomePage(){
+    this.router.navigateByUrl(`/home`);
   }
 }

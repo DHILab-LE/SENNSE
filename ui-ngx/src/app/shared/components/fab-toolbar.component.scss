@@ -1,5 +1,5 @@
 /**
- * Copyright © 2016-2024 The Thingsboard Authors
+ * Copyright © 2016-2025 ${ISPC Lecce | CNR}
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@ $button-fab-height: rem(5.600) !default;
 $button-fab-padding: rem(1.60) !default;
 $icon-button-margin: rem(0.600) !default;
 $z-index-fab: 20 !default;
+$extra-padding: rem(1.6);
 
 $swift-ease-in-duration: 0.3s !default;
 $swift-ease-in-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2) !default;
@@ -64,7 +65,9 @@ mat-fab-toolbar {
     display: block;
     position: relative;
     overflow: hidden;
-    height: $button-fab-width + ($icon-button-margin * 2);
+    height: $button-fab-width + ($icon-button-margin * 2) + $extra-padding;
+    padding-bottom: 80px;
+  
   }
 
   mat-fab-trigger {

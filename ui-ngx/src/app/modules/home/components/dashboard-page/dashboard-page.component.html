@@ -1,6 +1,6 @@
 <!--
 
-    Copyright © 2016-2024 The Thingsboard Authors
+    Copyright © 2016-2025 ${ISPC Lecce | CNR}
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@
           <img *ngIf="showDashboardLogo()" [src]="dashboardLogo | image | async"
                aria-label="dashboard_logo" class="dashboard_logo"/>
         </div>
-        <div class="tb-dashboard-action-panel">
+        <div class="tb-dashboard-action-panel" style="margin-top: 30px;">
           <button [fxShow]="showCloseToolbar()" mat-icon-button class="close-action"
                   matTooltip="{{ 'dashboard.close-toolbar' | translate }}"
                   matTooltipPosition="below"
@@ -351,7 +351,7 @@
             <mat-icon>close</mat-icon></button>
         </section>
         <section *ngIf="!embedded" data-html2canvas-ignore class="tb-powered-by-footer" [ngStyle]="{'color': dashboard.configuration.settings.titleColor}">
-          <span>Powered by <a href="https://thingsboard.io" target="_blank">Thingsboard v.{{ thingsboardVersion }}</a></span>
+          <span>Powered by <a href="https://www.ispc.cnr.it/it_it/" target="_blank">ISPC Lecce | CNR </a></span>
         </section>
       </mat-drawer-content>
       <mat-drawer class="tb-details-drawer"
@@ -410,9 +410,7 @@
             </tb-widgets-bundle-search>
           </div>
           <div class="details-buttons" *ngIf="isAddingWidget" fxLayout="row" fxLayoutAlign="start center">
-            <button mat-button type="button" (click)="importWidget($event)"
-                    *ngIf="dashboardWidgetSelectComponent?.selectWidgetMode === 'bundles' && !dashboardWidgetSelectComponent?.widgetsBundle">
-              <mat-icon>file_upload</mat-icon>{{ 'dashboard.import-widget' | translate }}</button>
+           
             <tb-toggle-select *ngIf="dashboardWidgetSelectComponent?.selectWidgetMode === 'bundles' && !dashboardWidgetSelectComponent?.widgetsBundle"
                               appearance="fill-invert"
                               disablePagination

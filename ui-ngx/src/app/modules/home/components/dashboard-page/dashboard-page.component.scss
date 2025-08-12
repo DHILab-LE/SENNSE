@@ -1,5 +1,5 @@
 /**
- * Copyright © 2016-2024 The Thingsboard Authors
+ * Copyright © 2016-2025 ${ISPC Lecce | CNR}
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,8 +62,9 @@ div.tb-dashboard-page {
     pointer-events: none;
 
     .dashboard_logo{
-      height: 75%;
+      height: 160%;
       margin-right: 16px;
+      margin-top: 26px;
     }
 
     &.tb-dashboard-toolbar-opened {

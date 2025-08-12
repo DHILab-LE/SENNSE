@@ -1,6 +1,6 @@
 <!--
 
-    Copyright © 2016-2024 The Thingsboard Authors
+    Copyright © 2016-2025 ${ISPC Lecce | CNR}
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -61,7 +61,7 @@
       </div>
     </ng-template>
   </mat-menu>
-  <div [class]="dashboardClass" id="gridster-background" style="height: 100%;">
+  <div [class]="dashboardClass" id="gridster-background" style="height: 100%; margin-top: 30px;">
     <gridster #gridster id="gridster-child" [options]="gridsterOpts">
       <gridster-item #gridsterItem [item]="widget" [class]="{'tb-noselect': isEdit}" *ngFor="let widget of dashboardWidgets">
         <tb-widget-container

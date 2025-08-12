@@ -16,7 +16,7 @@ IF "%SQL_DATA_FOLDER%" == "" (
 java -cp %jarfile% -Dloader.main=org.thingsboard.server.ThingsboardInstallApplication^
                     -Dinstall.data_dir=%installDir%^
                     -Dinstall.load_demo=%loadDemo%^
-                    -Dspring.jpa.hibernate.ddl-auto=none^
+                    -Dspring.jpa.hibernate.ddl-auto=update^
                     -Dinstall.upgrade=false^
                     -Dlogging.config=%BASE%\windows\install\logback.xml^
                     org.springframework.boot.loader.launch.PropertiesLauncher

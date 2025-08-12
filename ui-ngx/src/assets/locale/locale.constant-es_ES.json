@@ -183,7 +183,7 @@
         "domain-name": "Nombre de dominio",
         "domain-name-unique": "El nombre de dominio y protocolo debe ser único.",
         "domain-name-max-length": "El nombre de dominio debe ser menor que 256",
-        "error-verification-url": "Un nombre de dominio no debe contener símbolos '/' y ':'. Ejemplo: thingsboard.io",
+        "error-verification-url": "Un nombre de dominio no debe contener símbolos '/' y ':'. Ejemplo: sennse.ispc.cnr.it",
         "connection-settings": "Ajustes de conexión",
         "oauth2": {
           "access-token-uri": "URI Access token",

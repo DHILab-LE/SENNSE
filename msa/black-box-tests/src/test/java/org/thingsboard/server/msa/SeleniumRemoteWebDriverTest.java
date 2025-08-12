@@ -1,5 +1,5 @@
 /**
- * Copyright © 2016-2024 The Thingsboard Authors
+ * Copyright © 2016-2025 ${ISPC Lecce | CNR}
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -76,7 +76,7 @@ public class SeleniumRemoteWebDriverTest {
 
     @Test
     void testSeleniumConnection() {
-        driver.get("https://thingsboard.io/");
+        driver.get("https://sennse.ispc.cnr.it");
         captureScreen(driver, "success");
         log.info("Check the screenshot on target/allure-results/screenshots/success/screenshot???????????????.png");
         //Thread.sleep(TimeUnit.SECONDS.toMillis(30));

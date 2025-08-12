@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
               private domSanitizer: DomSanitizer,
               private authService: AuthService) {
 
-    console.log(`ThingsBoard Version: ${env.tbVersion}`);
+    // console.log(`ThingsBoard Version: ${env.tbVersion}`);
 
     this.matIconRegistry.addSvgIconResolver((name, namespace) => {
       if (namespace === 'mdi') {
@@ -100,6 +100,7 @@ export class AppComponent implements OnInit {
       }),
       skip(1),
     ).subscribe((data) => {
+      console.log('Check the data ', data);
       this.authService.gotoDefaultPlace(data.isAuthenticated);
     });
     this.authService.reloadUser();

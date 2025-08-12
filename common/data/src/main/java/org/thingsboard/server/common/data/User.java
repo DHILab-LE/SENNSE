@@ -1,5 +1,5 @@
 /**
- * Copyright © 2016-2024 The Thingsboard Authors
+ * Copyright © 2016-2025 ${ISPC Lecce | CNR}
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,6 +49,8 @@ public class User extends BaseDataWithAdditionalInfo<UserId> implements HasName,
     private String lastName;
     @NoXss
     private String phone;
+
+    private String logo;
 
     public User() {
         super();
@@ -153,6 +155,14 @@ public class User extends BaseDataWithAdditionalInfo<UserId> implements HasName,
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
     @Schema(description = "Additional parameters of the user", implementation = com.fasterxml.jackson.databind.JsonNode.class)

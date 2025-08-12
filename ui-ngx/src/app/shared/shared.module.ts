@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -13,6 +13,8 @@
 /// See the License for the specific language governing permissions and
 /// limitations under the License.
 ///
+
+
 
 import { NgModule, SecurityContext } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
@@ -421,6 +423,7 @@ export function MarkedOptionsFactory(markedOptionsService: MarkedOptionsService)
     HexInputComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     RouterModule,
     TranslateModule,

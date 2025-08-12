@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -390,6 +390,22 @@ export class MenuService {
         type: 'link',
         path: '/dashboards',
         icon: 'dashboards'
+      },
+      {
+        id: 'network_design',
+        name: 'network_design.network_design',
+        type: 'toggle',
+        path: '/networks',
+        icon: 'mdi:table-network',
+        pages: [
+          {
+            id: 'create_network',
+            name: 'create_network.create_network',
+            type: 'link',
+            path: '/networks/newNetwork',
+            icon: 'mdi:check-network'
+          }
+        ]
       },
       {
         id: 'entities',

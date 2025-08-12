@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -361,7 +361,7 @@ export const widgetContextCompletions: TbEditorCompletions = {
           }
         },
         settings: {
-          description: 'Widget settings containing widget specific properties according to the defined <a href="https://thingsboard.io/docs/user-guide/contribution/widgets-development/#settings-schema-section">settings json schema</a>',
+          description: 'Widget settings containing widget specific properties according to the defined <a href="https://sennse.ispc.cnr.it/docs/user-guide/contribution/widgets-development/#settings-schema-section">settings json schema</a>',
           meta: 'property',
           type: 'object'
         },

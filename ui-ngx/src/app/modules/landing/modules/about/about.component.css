@@ -1,0 +1,274 @@
+/**
+ * Copyright © 2016-2025 ${ISPC Lecce | CNR}
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* about.component.css */
+.about {
+    padding: 8rem 0;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-text {
+    flex: 1 1 50%;
+    min-width: 300px;
+}
+
+.about-visual {
+    flex: 1 1 40%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a2a6c;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.visual-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.heritage-building {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.building-base {
+    font-size: 8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.sensor-network {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.sensor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(52, 152, 219, 0.1);
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    backdrop-filter: blur(10px);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.sensor-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sensor-2 {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sensor-3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sensor-4 {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.connection-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    position: absolute;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    opacity: 0.6;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.line-1 {
+    top: 25px;
+    left: 50%;
+    width: 2px;
+    height: 100px;
+    transform: translateX(-50%);
+}
+
+.line-2 {
+    right: 25px;
+    top: 50%;
+    width: 100px;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.line-3 {
+    bottom: 25px;
+    left: 50%;
+    width: 2px;
+    height: 100px;
+    transform: translateX(-50%);
+}
+
+.line-4 {
+    left: 25px;
+    top: 50%;
+    width: 100px;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Sensor pulse effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+.sensor {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.sensor-1 {
+    animation-delay: 0s;
+}
+
+.sensor-2 {
+    animation-delay: 0.5s;
+}
+
+.sensor-3 {
+    animation-delay: 1s;
+}
+
+.sensor-4 {
+    animation-delay: 1.5s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .about-visual {
+        flex: 1 1 100%;
+    }
+
+    .about-stats {
+        justify-content: center;
+    }
+
+    .visual-container {
+        margin-top: 2rem;
+    }
+}

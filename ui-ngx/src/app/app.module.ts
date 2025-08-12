@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -26,36 +26,33 @@ import { HomeModule } from '@home/home.module';
 import { AppComponent } from './app.component';
 import { DashboardRoutingModule } from '@modules/dashboard/dashboard-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { LandingModule } from '@modules/landing/landing.module';
 
-const routes: Routes = [
-  { path: '**',
-    redirectTo: 'home'
-  }
-];
+
+const routes: Routes = [{ path: '**', redirectTo: 'home' }];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class PageNotFoundRoutingModule { }
-
-
-@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
   declarations: [
-    AppComponent
   ],
+})
+export class PageNotFoundRoutingModule {}
+
+@NgModule({
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
+    LandingModule,
     LoginModule,
     HomeModule,
     DashboardRoutingModule,
-    PageNotFoundRoutingModule
+    PageNotFoundRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

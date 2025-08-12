@@ -25,6 +25,7 @@
     "@angular/platform-browser": "^15.2.10",
     "@angular/platform-browser-dynamic": "^15.2.10",
     "@angular/router": "^15.2.10",
+    "@primeng/themes": "^19.0.5",
     "@auth0/angular-jwt": "^5.1.2",
     "@date-io/core": "1.3.7",
     "@date-io/date-fns": "1.3.7",
@@ -84,6 +85,7 @@
     "ngx-sharebuttons": "^12.0.0",
     "ngx-translate-messageformat-compiler": "^6.2.0",
     "objectpath": "^2.0.0",
+    "pdf-lib": "^1.17.1",
     "prettier": "^2.8.3",
     "prop-types": "^15.8.1",
     "qrcode": "^1.5.1",
@@ -107,7 +109,8 @@
     "tslib": "^2.5.0",
     "tv4": "^1.3.0",
     "typeface-roboto": "^1.1.13",
-    "zone.js": "~0.13.0"
+    "zone.js": "~0.13.0",
+    "primeng": "^19.0.8"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "~15.0.0",

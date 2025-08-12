@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -170,8 +170,8 @@ export class DashboardsTableConfigResolver implements Resolve<EntityTableConfig<
         this.config.cellActionDescriptors = this.configureCellActions(this.config.componentsData.dashboardScope);
         this.config.groupActionDescriptors = this.configureGroupActions(this.config.componentsData.dashboardScope);
         this.config.addActionDescriptors = this.configureAddActions(this.config.componentsData.dashboardScope);
-        this.config.addEnabled = !(this.config.componentsData.dashboardScope === 'customer_user' ||
-          this.config.componentsData.dashboardScope === 'edge_customer_user');
+        // this.config.addEnabled = !(this.config.componentsData.dashboardScope === 'customer_user' ||
+        //   this.config.componentsData.dashboardScope === 'edge_customer_user');
         this.config.entitiesDeleteEnabled = this.config.componentsData.dashboardScope === 'tenant';
         this.config.deleteEnabled = () => this.config.componentsData.dashboardScope === 'tenant';
         return this.config;
@@ -336,7 +336,7 @@ export class DashboardsTableConfigResolver implements Resolve<EntityTableConfig<
 
   configureAddActions(dashboardScope: string): Array<HeaderActionDescriptor> {
     const actions: Array<HeaderActionDescriptor> = [];
-    if (dashboardScope === 'tenant') {
+    if (dashboardScope === 'tenant' || dashboardScope === 'customer') {
       actions.push(
         {
           name: this.translate.instant('dashboard.create-new-dashboard'),

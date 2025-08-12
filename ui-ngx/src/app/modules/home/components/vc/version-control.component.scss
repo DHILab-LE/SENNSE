@@ -1,5 +1,5 @@
 /**
- * Copyright © 2016-2024 The Thingsboard Authors
+ * Copyright © 2016-2025 ${ISPC Lecce | CNR}
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,3 +16,20 @@
 :host {
 
 }
+#cy {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ccc;
+    left: 200px;
+    top: 33px;
+  }
+  
+  #fullscreen {
+    right: 8rem;
+    top: 50px;
+  }
+  
+  #downloadList {
+    right: 8rem;
+    top: 515px;
+  }

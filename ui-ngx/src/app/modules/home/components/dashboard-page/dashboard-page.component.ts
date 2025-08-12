@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -259,7 +259,7 @@ export class DashboardPageComponent extends PageComponent implements IDashboardC
   rightLayoutSize: {width: string; height: string} = {width: '100%', height: '100%'};
 
   private dashboardLogoCache: SafeUrl;
-  private defaultDashboardLogo = 'assets/logo_title_white.svg';
+  private defaultDashboardLogo = 'assets/sennse-logo.svg';
 
   private dashboardResize$: ResizeObserver;
 

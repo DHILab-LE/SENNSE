@@ -203,7 +203,7 @@
         "domain-name": "域名",
         "domain-name-unique": "域名和协议必须是唯一的。",
         "domain-name-max-length": "域名应该少于256个字符。",
-        "error-verification-url": "域名不应包含符号 “/” 和 “:”。例：thingsboard.io",
+        "error-verification-url": "域名不应包含符号 “/” 和 “:”。例：sennse.ispc.cnr.it",
         "connection-settings": "连接设置",
         "oauth2": {
             "access-token-uri": "访问令牌URI",

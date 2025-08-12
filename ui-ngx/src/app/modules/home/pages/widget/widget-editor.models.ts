@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ const widgetEditorCompletions: TbEditorCompletions = {
           meta: 'function'
         },
         getSettingsSchema: {
-          description: 'Optional function returning widget settings schema json as alternative to <b>Settings tab</b> of <a href="https://thingsboard.io/docs/user-guide/contribution/widgets-development/#settings-schema-section">Settings schema section</a>.',
+          description: 'Optional function returning widget settings schema json as alternative to <b>Settings tab</b> of <a href="https://sennse.ispc.cnr.it/docs/user-guide/contribution/widgets-development/#settings-schema-section">Settings schema section</a>.',
           meta: 'function',
           return: {
             description: 'An widget settings schema json',
@@ -59,7 +59,7 @@ const widgetEditorCompletions: TbEditorCompletions = {
           }
         },
         getDataKeySettingsSchema: {
-          description: 'Optional function returning particular data key settings schema json as alternative to <b>Data key settings schema</b> of <a href="https://thingsboard.io/docs/user-guide/contribution/widgets-development/#settings-schema-section">Settings schema section</a>.',
+          description: 'Optional function returning particular data key settings schema json as alternative to <b>Data key settings schema</b> of <a href="https://sennse.ispc.cnr.it/docs/user-guide/contribution/widgets-development/#settings-schema-section">Settings schema section</a>.',
           meta: 'function',
           return: {
             description: 'A particular data key settings schema json',

@@ -1,0 +1,37 @@
+<!--
+
+    Copyright © 2016-2025 ${ISPC Lecce | CNR}
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!-- features.component.html -->
+<section #featuresSection id="features" class="features">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <h2 class="section-title">Smart Features for Heritage Preservation</h2>
+            <p class="section-description">
+                Discover how our IoT solutions revolutionize cultural heritage management
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <div *ngFor="let feature of features; let i = index" class="feature-card fade-in-up"
+                [style.animation-delay]="i * 0.1 + 's'">
+                <div class="feature-icon">{{feature.icon}}</div>
+                <h3 class="feature-title">{{feature.title}}</h3>
+                <p class="feature-description">{{feature.description}}</p>
+            </div>
+        </div>
+    </div>
+</section>

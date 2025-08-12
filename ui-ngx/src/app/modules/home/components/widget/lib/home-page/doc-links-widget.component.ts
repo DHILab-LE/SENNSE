@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -40,22 +40,22 @@ const defaultDocLinksMap = new Map<Authority, DocumentationLinks>(
         {
           icon: 'rocket',
           name: 'Getting started',
-          link: 'https://thingsboard.io/docs/getting-started-guides/helloworld/'
+          link: 'https://sennse.ispc.cnr.it/docs/getting-started-guides/helloworld/'
         },
         {
           icon: 'title',
           name: 'Tenant profiles',
-          link: 'https://thingsboard.io/docs/user-guide/tenant-profiles/'
+          link: 'https://sennse.ispc.cnr.it/docs/user-guide/tenant-profiles/'
         },
         {
           icon: 'insert_chart',
           name: 'API',
-          link: 'https://thingsboard.io/docs/api/'
+          link: 'https://sennse.ispc.cnr.it/docs/api/'
         },
         {
           icon: 'now_widgets',
           name: 'Widgets Library',
-          link: 'https://thingsboard.io/docs/user-guide/ui/widget-library/'
+          link: 'https://sennse.ispc.cnr.it/docs/user-guide/ui/widget-library/'
         }
       ]
     }],
@@ -64,22 +64,22 @@ const defaultDocLinksMap = new Map<Authority, DocumentationLinks>(
         {
           icon: 'rocket',
           name: 'Getting started',
-          link: 'https://thingsboard.io/docs/getting-started-guides/helloworld/'
+          link: 'https://sennse.ispc.cnr.it/docs/getting-started-guides/helloworld/'
         },
         {
           icon: 'settings_ethernet',
           name: 'Rule engine',
-          link: 'https://thingsboard.io/docs/user-guide/rule-engine-2-0/re-getting-started/'
+          link: 'https://sennse.ispc.cnr.it/docs/user-guide/rule-engine-2-0/re-getting-started/'
         },
         {
           icon: 'insert_chart',
           name: 'API',
-          link: 'https://thingsboard.io/docs/api/'
+          link: 'https://sennse.ispc.cnr.it/docs/api/'
         },
         {
           icon: 'devices',
           name: 'Device profiles',
-          link: 'https://thingsboard.io/docs/user-guide/device-profiles/'
+          link: 'https://sennse.ispc.cnr.it/docs/user-guide/device-profiles/'
         }
       ]
     }],
@@ -88,7 +88,7 @@ const defaultDocLinksMap = new Map<Authority, DocumentationLinks>(
         {
           icon: 'rocket',
           name: 'Getting started',
-          link: 'https://thingsboard.io/docs/getting-started-guides/helloworld/'
+          link: 'https://sennse.ispc.cnr.it/docs/getting-started-guides/helloworld/'
         }
       ]
     }]

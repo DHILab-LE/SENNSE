@@ -1,5 +1,5 @@
 ///
-/// Copyright © 2016-2024 The Thingsboard Authors
+/// Copyright © 2016-2025 ${ISPC Lecce | CNR}
 ///
 /// Licensed under the Apache License, Version 2.0 (the "License");
 /// you may not use this file except in compliance with the License.
@@ -41,6 +41,8 @@ import { ProfilesModule } from '@home/pages/profiles/profiles.module';
 import { AlarmModule } from '@home/pages/alarm/alarm.module';
 import { EntitiesModule } from '@home/pages/entities/entities.module';
 import { FeaturesModule } from '@home/pages/features/features.module';
+import { DesignNetworkModule } from '@home/pages/design-network/design_netwrok.module';
+import { NewNetworkModule } from '@home/pages/new-network/new_network.module';
 import { NotificationModule } from '@home/pages/notification/notification.module';
 import { AccountModule } from '@home/pages/account/account.module';
 
@@ -56,6 +58,8 @@ import { AccountModule } from '@home/pages/account/account.module';
     AssetProfileModule,
     ProfilesModule,
     EntitiesModule,
+    DesignNetworkModule,
+    NewNetworkModule,
     FeaturesModule,
     NotificationModule,
     DeviceModule,
