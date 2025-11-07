@@ -187,7 +187,10 @@ public class UserController extends BaseController {
     public JwtPair getUserToken(
             @Parameter(description = USER_ID_PARAM_DESCRIPTION)
             @PathVariable(USER_ID) String strUserId) throws ThingsboardException {
+        System.out.println("**************** GET USER ID TOKEN ****************");
+
         checkParameter(USER_ID, strUserId);
+
         if (!userTokenAccessEnabled) {
             throw new ThingsboardException(YOU_DON_T_HAVE_PERMISSION_TO_PERFORM_THIS_OPERATION,
                     ThingsboardErrorCode.PERMISSION_DENIED);

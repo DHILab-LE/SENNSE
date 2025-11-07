@@ -42,7 +42,7 @@ services:
       - kafka-data:/bitnami
   mytb:
     restart: always
-    image: "meddali/sennse:2.1.5"
+    image: "thingsboard/tb-postgres:3.7.0"
     depends_on:
       - kafka
     ports:
