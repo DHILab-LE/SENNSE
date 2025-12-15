@@ -53,6 +53,7 @@ export class HomeComponent extends PageComponent implements AfterViewInit, OnIni
   sidenavOpened = true;
 
   logo = 'assets/sennse-logo.svg';
+  ISPCCNRLogo = 'assets/ispc-cnr-logo2.png'; 
 
   @ViewChild('sidenav')
   sidenav: MatSidenav;

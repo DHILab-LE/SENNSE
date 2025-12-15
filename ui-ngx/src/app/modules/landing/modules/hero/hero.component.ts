@@ -38,7 +38,7 @@ export class HeroComponent {
       title: 'SENNSE - IoT Driven Platform',
       html: `
     <iframe width="100%" height="315" 
-      src="https://www.youtube.com/embed/ItN5Z90iit0" 
+      src="https://www.youtube.com/embed/uuDQC8Wa5Pk" 
       frameborder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>

@@ -22,7 +22,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ThingsBoardService {
-  private baseUrl = 'http://150.145.56.26:4200/api';
+  private baseUrl = 'https://sennse.ispc.cnr.it/api';
   private jwtToken = localStorage.getItem('jwt_token') || '';
 
   constructor(private http: HttpClient) {}

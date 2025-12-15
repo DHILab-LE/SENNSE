@@ -24,7 +24,8 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 })
 export class HeaderComponent{
 
-  logo = 'assets/sennse-logo.svg';
+  ISPCCNRLogo = 'assets/ispc-cnr-logo.svg';
+  logo =  'assets/sennse-logo.svg';
   isScrolled = false;
   isMobileMenuOpen = false;
 

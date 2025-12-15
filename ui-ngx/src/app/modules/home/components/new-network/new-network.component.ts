@@ -68,7 +68,7 @@ export class NewNetworkComponent implements OnInit {
     private store: Store<AppState>,
     private renderer: Renderer2,
     private tbService: ThingsBoardService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const jwtToken = localStorage.getItem("jwt_token");
@@ -281,50 +281,53 @@ export class NewNetworkComponent implements OnInit {
         this.boardsListDiv.innerHTML =
           '<p class="text-gray-500 text-sm">No boards to display.</p>';
       } else {
-        for (const board of this.boards) {
-          const { id, name, selectedTelemetry } = board;
-          // Create device
-          const deviceData = await this.tbService
-            .createDevice(name)
-            .toPromise();
-          const deviceId = deviceData.id.id;
-          // Get credentials
-          const credentials = await this.tbService
-            .getDeviceCredentials(deviceId)
-            .toPromise();
-          console.log("GetDeviceCredentials Result: ", credentials);
-
-          board.accessToken = credentials.credentialsId;
-          board.deviceId = credentials.deviceId.id;
-          const telemetryKeys = new Map(); // Use Map to track occurrences of keys
-
-          // Publish telemetry
-          for (const telemetry of selectedTelemetry) {
-            const baseKey = `${this.getInitials(telemetry)}_${name}`;
-            let telemetryKey = baseKey;
-
-            // Check for duplicates and append an incrementing number if necessary
-            let count = telemetryKeys.get(baseKey) || 1; // Get current count or default to 0
-            if (count > 1) {
-              telemetryKey = `${this.getInitials(telemetry)}_${count}_${
-                board.name
-              }`;
-            }
-
-            // Update the count in the map
-            telemetryKeys.set(baseKey, count + 1);
-
-            const telemetryData = {
-              [telemetryKey]: telemetry,
-            };
-            await this.tbService
-              .publishTelemetry(credentials.credentialsId, telemetryData)
+        try {
+          for (const board of this.boards) {
+            const { id, name, selectedTelemetry } = board;
+            // Create device
+            const deviceData = await this.tbService
+              .createDevice(name)
               .toPromise();
+            const deviceId = deviceData.id.id;
+            // Get credentials
+            const credentials = await this.tbService
+              .getDeviceCredentials(deviceId)
+              .toPromise();
+            console.log("GetDeviceCredentials Result: ", credentials);
+
+            board.accessToken = credentials.credentialsId;
+            board.deviceId = credentials.deviceId.id;
+            const telemetryKeys = new Map(); // Use Map to track occurrences of keys
+
+            // Publish telemetry
+            for (const telemetry of selectedTelemetry) {
+              const baseKey = `${this.getInitials(telemetry)}_${name}`;
+              let telemetryKey = baseKey;
+
+              // Check for duplicates and append an incrementing number if necessary
+              let count = telemetryKeys.get(baseKey) || 1; // Get current count or default to 0
+              if (count > 1) {
+                telemetryKey = `${this.getInitials(telemetry)}_${count}_${board.name
+                  }`;
+              }
+
+              // Update the count in the map
+              telemetryKeys.set(baseKey, count + 1);
+
+              const telemetryData = {
+                [telemetryKey]: telemetry,
+              };
+              await this.tbService
+                .publishTelemetry(credentials.credentialsId, telemetryData)
+                .toPromise();
+            }
           }
+          this.renderDeviceList();
+          this.emailSectionVisible = true;
+          alert("Form is valid! Sensor Network data has been added.");
+        } catch (error) {
+          alert("Not allow to have an existing Device Name!")
         }
-        this.renderDeviceList();
-        this.emailSectionVisible = true;
-        alert("Form is valid! Network data has been added.");
       }
     }
 

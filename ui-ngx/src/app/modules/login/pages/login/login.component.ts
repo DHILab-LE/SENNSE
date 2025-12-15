@@ -33,6 +33,7 @@ import { OAuth2ClientInfo } from '@shared/models/oauth2.models';
 export class LoginComponent extends PageComponent implements OnInit {
 
   passwordViolation = false;
+  ISPCCNRLogo = 'assets/ispc-cnr-logo.svg'; 
 
   loginFormGroup = this.fb.group({
     username: '',
